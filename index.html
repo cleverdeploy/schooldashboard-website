@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>School Dashboard — Detentions, Behaviour Points & Seating Plans for UK schools</title>
+  <meta name="description" content="The all-in-one classroom-management dashboard for UK schools. Track detentions, award behaviour points, plan seating, run stakeholder surveys and see whole-school analytics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="#" class="brand">
+      <span class="brand-mark">1</span>
+      <span class="brand-name">School<span>Dashboard</span></span>
+    </a>
+    <nav class="primary-nav">
+      <a href="#features">Features</a>
+      <a href="#detentions">Detentions</a>
+      <a href="#behaviour">Behaviour</a>
+      <a href="#seating">Seating</a>
+      <a href="#surveys">Surveys</a>
+      <a href="#analytics">Analytics</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="https://app.schooldashboard.uk/" class="nav-login">Login</a>
+      <a href="#contact" class="btn btn-primary">Book a demo</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">One school dashboard</span>
+      <h1>One dashboard for detentions, behaviour, seating and insight.</h1>
+      <p class="lede">
+        School Dashboard replaces the patchwork of spreadsheets, paper slips and printouts
+        that schools use to track behaviour. Log a detention in two taps, award a
+        behaviour point from a seating plan, send parents a branded email — and see
+        whole-school analytics broken down by year group, ethnicity, SEND status and
+        detention category.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary btn-lg">Book a demo</a>
+        <a href="#features" class="btn btn-ghost btn-lg">See features</a>
+      </div>
+      <ul class="hero-trust">
+        <li>Microsoft Entra ID SSO</li>
+        <li>GDPR-friendly UK hosting</li>
+        <li>Per-school branding</li>
+      </ul>
+    </div>
+    <div class="hero-shot">
+      <img src="assets/dashboard.png" alt="School Dashboard home screen with admin navigation" loading="eager">
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="container">
+    <div class="strip-grid">
+      <div><strong>2 taps</strong><span>to log a detention</span></div>
+      <div><strong>1 tap</strong><span>to award a behaviour point</span></div>
+      <div><strong>Nightly</strong><span>Entra ID staff sync</span></div>
+      <div><strong>Whole-school</strong><span>analytics, broken down</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section">
+  <div class="container">
+    <header class="section-head">
+      <span class="eyebrow">What it does</span>
+      <h2>Everything pastoral leads need, nothing they don't.</h2>
+      <p>Six modules that share one student roster, one staff list and one audit trail.</p>
+    </header>
+
+    <div class="feature-grid">
+      <a href="#detentions" class="feature-card">
+        <div class="feature-icon" aria-hidden="true">⏱</div>
+        <h3>Detentions</h3>
+        <p>Log, view and report detentions by year group, department, VTG or whole school. Notify parents by email.</p>
+      </a>
+      <a href="#behaviour" class="feature-card">
+        <div class="feature-icon" aria-hidden="true">★</div>
+        <h3>Behaviour Points</h3>
+        <p>One-tap point or merit during a lesson. Warning rules fire when a student crosses a threshold.</p>
+      </a>
+      <a href="#seating" class="feature-card">
+        <div class="feature-icon" aria-hidden="true">▦</div>
+        <h3>Seating Plans</h3>
+        <p>Drag-and-drop layouts per class with auto-seat. The seating plan IS the behaviour interface.</p>
+      </a>
+      <a href="#warnings" class="feature-card">
+        <div class="feature-icon" aria-hidden="true">⚠</div>
+        <h3>Warnings & Sanctions</h3>
+        <p>Define rules — "3 BPs in 7 days" — that escalate to Heads of Year automatically.</p>
+      </a>
+      <a href="#surveys" class="feature-card">
+        <div class="feature-icon" aria-hidden="true">📋</div>
+        <h3>Stakeholder Surveys</h3>
+        <p>School Pulse 360 — Kirkland-Rowell-style importance × performance surveys for parents, staff and pupils.</p>
+      </a>
+      <a href="#analytics" class="feature-card">
+        <div class="feature-icon" aria-hidden="true">📊</div>
+        <h3>Whole-school analytics</h3>
+        <p>Detentions broken down by year group, ethnicity, SEND status, disadvantaged status and category — at a glance.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="detentions" class="section section-alt">
+  <div class="container split">
+    <div class="split-copy">
+      <span class="eyebrow">Detentions</span>
+      <h2>Log a detention in the time it takes to say it.</h2>
+      <p>Pick a pupil, pick a reason from your school's preset list, choose the type — break, after school, Saturday — and you're done. Filter by Year Group, Department, VTG or Whole School. Export to PDF or CSV for SLT meetings.</p>
+      <ul class="check-list">
+        <li>Reasons are configurable per school</li>
+        <li>Audit log records every change</li>
+        <li>Parents notified via branded email</li>
+        <li>Bulk CSV import for historic data</li>
+      </ul>
+    </div>
+    <figure class="split-shot">
+      <img src="assets/detentions.png" alt="The Detentions list filtered by My Detentions for the current week">
+      <figcaption>Detentions list — filter by My Detentions, Year Group, Department, VTG or Whole School.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="behaviour" class="section">
+  <div class="container split reverse">
+    <div class="split-copy">
+      <span class="eyebrow">Behaviour Points</span>
+      <h2>One tap, mid-lesson.</h2>
+      <p>Behaviour Points are designed for the cognitive load of a real classroom — one screen, one tap, no menus. Awards are timestamped to the teacher and lesson. When a pupil crosses a Warning Rule threshold, the system emails the Head of Year automatically.</p>
+      <ul class="check-list">
+        <li>Merits and behaviour points on one screen</li>
+        <li>Repeat-offender list updates live</li>
+        <li>Warning Rule previews show what will trigger</li>
+        <li>Backed by the school's seating plan</li>
+      </ul>
+    </div>
+    <figure class="split-shot">
+      <img src="assets/behaviour_points.png" alt="Behaviour Points screen with year/subject selectors and a warning rule preview">
+      <figcaption>Year 7 · Art — back-of-class view with live activity and warning preview.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="seating" class="section section-alt">
+  <div class="container split">
+    <div class="split-copy">
+      <span class="eyebrow">Seating Plans</span>
+      <h2>The seating plan IS the behaviour interface.</h2>
+      <p>Lay out your classroom for any year-group/subject combination. Use <em>Random seats</em> or <em>Autofill</em> to populate quickly, then drag pupils around to refine. Tap a seat to award a behaviour point or merit on the spot.</p>
+      <ul class="check-list">
+        <li>One plan per Year × Subject pair</li>
+        <li>Unseated pupils list as you place</li>
+        <li>Plans persist — they're not just a printout</li>
+        <li>Cover teachers see exactly what the regular teacher sees</li>
+      </ul>
+    </div>
+    <figure class="split-shot">
+      <img src="assets/seating_plans.png" alt="Seating plan grid for Year 7 Art with unseated students panel">
+      <figcaption>Year 7 · Art — drag to seat, click a seat to award a point.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="warnings" class="section">
+  <div class="container split reverse">
+    <div class="split-copy">
+      <span class="eyebrow">Warnings & Sanctions</span>
+      <h2>Escalation that runs itself.</h2>
+      <p>Define the rules your pastoral team already follows — "3 behaviour points in 7 days notifies the Head of Year", "5 points in a half-term triggers a parent meeting". The dashboard watches every event and emails the right person at the right moment.</p>
+      <ul class="check-list">
+        <li>Configurable per school</li>
+        <li>Year-Group Overseer routing</li>
+        <li>Serious Sanctions module for high-severity incidents</li>
+        <li>Full audit trail of every triggered rule</li>
+      </ul>
+    </div>
+    <figure class="split-shot">
+      <img src="assets/warnings.png" alt="Warnings screen showing rule configuration and triggers">
+      <figcaption>Warnings — see triggered rules and the events that caused them.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="surveys" class="section section-alt">
+  <div class="container split">
+    <div class="split-copy">
+      <span class="eyebrow">Stakeholder Surveys</span>
+      <h2>School Pulse 360 — find out what matters most.</h2>
+      <p>Run Kirkland-Rowell-style stakeholder perception surveys with parents, staff and pupils. Each question is scored twice — importance and performance — and plotted on a quadrant chart that immediately shows where to focus.</p>
+      <ul class="check-list">
+        <li>Pre-built question banks per stakeholder group</li>
+        <li>Quadrant charts: high-importance / low-performance = act now</li>
+        <li>PDF export of the full report</li>
+        <li>Methodology lineage shown on every chart</li>
+      </ul>
+    </div>
+    <figure class="split-shot">
+      <img src="assets/surveys.png" alt="Surveys index page listing School Pulse 360 surveys">
+      <figcaption>Surveys index — manage live surveys and view reports.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="analytics" class="section">
+  <div class="container split reverse">
+    <div class="split-copy">
+      <span class="eyebrow">Whole-school analytics</span>
+      <h2>Every detention, broken down the way Ofsted asks.</h2>
+      <p>Open the Whole School view and the dashboard plots detentions by gender, year group, ethnicity, SEND status, disadvantaged status and category — instantly. No pivot tables, no exporting to Excel.</p>
+      <ul class="check-list">
+        <li>Filter by category, reason, year, department or VTG</li>
+        <li>Date-range picker for half-term, term or year</li>
+        <li>One-click report download for SLT meetings</li>
+        <li>Detentions-over-time chart for trend spotting</li>
+      </ul>
+    </div>
+    <figure class="split-shot">
+      <img src="assets/analytics.png" alt="Whole-school detention analytics with charts broken down by year group, ethnicity, SEND status and category">
+      <figcaption>Whole School view — detentions broken down by year, ethnicity, SEND, disadvantaged status and category.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <header class="section-head">
+      <span class="eyebrow">Roster & access</span>
+      <h2>One source of truth for students and staff.</h2>
+    </header>
+    <div class="duo">
+      <figure class="duo-shot">
+        <img src="assets/students.png" alt="Student Management page with demographic donut chart and student list">
+        <figcaption>Students — demographics at a glance, full roster underneath.</figcaption>
+      </figure>
+      <figure class="duo-shot">
+        <img src="assets/teachers.png" alt="Teacher Management page with VTG mapping and Entra ID sync">
+        <figcaption>Teachers — sync nightly from Microsoft Entra ID, no CSV chasing.</figcaption>
+      </figure>
+    </div>
+    <div class="duo-copy">
+      <div>
+        <h3>Student roster</h3>
+        <p>Import from your MIS via CSV. Ethnicity, year group, VTG and SEND fields are first-class — feeding straight into inclusion reporting.</p>
+      </div>
+      <div>
+        <h3>Teacher roster</h3>
+        <p>One-click sync from Microsoft Entra ID. New starters appear; leavers go inactive automatically. Per-school filter expressions support unusual department names.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <header class="section-head">
+      <span class="eyebrow">Built right</span>
+      <h2>The things schools actually ask about.</h2>
+    </header>
+    <div class="kv-grid">
+      <div class="kv">
+        <h3>Microsoft Entra SSO</h3>
+        <p>Staff sign in with their existing school accounts. Tenant ID stored encrypted at rest. Nightly sync keeps the roster current.</p>
+      </div>
+      <div class="kv">
+        <h3>Multi-tenant by design</h3>
+        <p>Every record is school-scoped. Cross-school leakage is structurally impossible — not a policy, a property of the schema.</p>
+      </div>
+      <div class="kv">
+        <h3>Per-school branding</h3>
+        <p>Upload your logo and header colour. Parent emails go out under your school's identity, not ours.</p>
+      </div>
+      <div class="kv">
+        <h3>Roles that match real schools</h3>
+        <p>Superadmin, admin, teacher, parent, child — with policies that mirror who's actually allowed to see what.</p>
+      </div>
+      <div class="kv">
+        <h3>Audit log on every change</h3>
+        <p>Every detention create, update and delete is recorded with user, school and changed fields. Ofsted-friendly.</p>
+      </div>
+      <div class="kv">
+        <h3>Daily database backups</h3>
+        <p>Nightly Postgres dumps to S3 at 04:00 UTC. Point-in-time restores are a one-line command for the operations team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="container cta-inner">
+    <h2>See it on your school's data.</h2>
+    <p>We'll spin up a tenant pre-loaded with a sample of your staff and pupils, and walk your SLT through every module in 30 minutes.</p>
+    <a href="mailto:hello@schooldashboard.uk?subject=Demo%20request" class="btn btn-primary btn-lg">hello@schooldashboard.uk</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand">
+        <span class="brand-mark">1</span>
+        <span class="brand-name">School<span>Dashboard</span></span>
+      </div>
+      <p class="muted">© 2026 schooldashboard.uk · Made in the UK</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4>Product</h4>
+        <a href="#detentions">Detentions</a>
+        <a href="#behaviour">Behaviour Points</a>
+        <a href="#seating">Seating Plans</a>
+        <a href="#warnings">Warnings</a>
+        <a href="#surveys">Surveys</a>
+        <a href="#analytics">Analytics</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="mailto:hello@schooldashboard.uk">Contact</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

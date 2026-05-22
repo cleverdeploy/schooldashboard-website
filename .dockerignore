@@ -1,0 +1,5 @@
+.git
+screenshots/
+tmp/
+take_screenshots.py
+*.py
