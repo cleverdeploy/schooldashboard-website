@@ -137,7 +137,7 @@ PAGES = [
     ("behaviour_points", "/behaviour-points"),
     ("seating_plans", "/seating-plans"),
     ("warnings", "/warnings"),
-    ("analytics", "/admin/analytics"),
+    ("analytics", "/teachers/detentions?view=whole_school"),
     ("students", "/admin/students"),
     ("teachers", "/admin/teachers"),
     ("surveys", "/admin/surveys"),
