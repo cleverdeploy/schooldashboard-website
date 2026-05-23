@@ -219,7 +219,7 @@ p { margin: 0 0 1em; color: var(--ink-2); }
 }
 .strip-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   text-align: center;
 }
