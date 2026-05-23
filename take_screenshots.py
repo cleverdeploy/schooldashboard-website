@@ -130,6 +130,42 @@ SP_SEED_JS = r"""() => {
   }
 }"""
 
+STUDENTS_SEED_JS = r"""() => {
+  // Replace year-group counts with ~200 per year (Years 7-11, total 1010)
+  const counts = {'Year 7': 204, 'Year 8': 198, 'Year 9': 202, 'Year 10': 207, 'Year 11': 199};
+  const total = Object.values(counts).reduce((a, b) => a + b, 0);
+  // Update the big active-count number
+  const headings = [...document.querySelectorAll('div')].filter(d => {
+    const t = (d.textContent || '').trim();
+    return /^\d{2,4}$/.test(t) && d.children.length === 0;
+  });
+  for (const h of headings) {
+    const cs = window.getComputedStyle(h);
+    if (parseFloat(cs.fontSize) >= 30) { h.textContent = String(total); break; }
+  }
+  // Re-render the donut with the new counts
+  const el = document.getElementById('year-group-pie');
+  if (el && typeof echarts !== 'undefined') {
+    el.dataset.yearCounts = JSON.stringify(counts);
+    const existing = echarts.getInstanceByDom(el);
+    if (existing) existing.dispose();
+    const chart = echarts.init(el);
+    chart.setOption({
+      tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
+      legend: { show: false },
+      series: [{
+        type: 'pie',
+        radius: ['35%', '70%'],
+        center: ['50%', '50%'],
+        avoidLabelOverlap: true,
+        itemStyle: { borderColor: '#fff', borderWidth: 1 },
+        label: { fontSize: 11, formatter: '{b}\n{c}' },
+        data: Object.keys(counts).map(k => ({ name: k, value: counts[k] }))
+      }]
+    });
+  }
+}"""
+
 PAGES = [
     ("dashboard", "/"),
     ("detentions", "/teachers/detentions"),
@@ -193,6 +229,9 @@ def main():
                 elif name == "seating_plans":
                     page.evaluate(SP_SEED_JS)
                     page.wait_for_timeout(300)
+                elif name == "students":
+                    page.evaluate(STUDENTS_SEED_JS)
+                    page.wait_for_timeout(500)
                 # Replace school header logo with a banner that matches the header navy
                 page.evaluate(r"""() => {
                   const headerColor = '#003366';
