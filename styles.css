@@ -432,3 +432,23 @@ p { margin: 0 0 1em; color: var(--ink-2); }
 
 /* Smooth scroll for anchors */
 html { scroll-behavior: smooth; }
+
+/* Legal pages (privacy, terms) */
+.legal { max-width: 760px; }
+.legal h1 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); }
+.legal h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  color: var(--ink);
+}
+.legal p, .legal li {
+  font-size: 1rem;
+  color: var(--ink-2);
+  line-height: 1.65;
+}
+.legal ul { padding-left: 1.4em; margin: 0 0 1em; }
+.legal li { margin-bottom: 0.4em; }
+.legal a { color: var(--brand-2); text-decoration: underline; }
+.legal a:hover { color: var(--brand); }
