@@ -130,6 +130,23 @@ SP_SEED_JS = r"""() => {
   }
 }"""
 
+ANALYTICS_ANON_JS = r"""() => {
+  // The "By Year Group" chart on /teachers/detentions?view=whole_school
+  // falls back to VTG names (Dyson 4, Fitzmaurice 3) when year_group isn't set.
+  // Replace it with anonymous Year 7..11 labels via the ECharts API.
+  if (typeof echarts === 'undefined') return;
+  const el = document.getElementById('year-group-chart');
+  if (!el) return;
+  const chart = echarts.getInstanceByDom(el);
+  if (!chart) return;
+  const newCats = ['Year 7', 'Year 8', 'Year 9', 'Year 10', 'Year 11'];
+  const newVals = [4, 7, 3, 8, 5];
+  chart.setOption({
+    xAxis: { type: 'category', data: newCats, axisLabel: { rotate: 0, interval: 0 } },
+    series: [{ type: 'bar', data: newVals, label: { show: true, position: 'top' } }]
+  });
+}"""
+
 STUDENTS_SEED_JS = r"""() => {
   // Replace year-group counts with ~200 per year (Years 7-11, total 1010)
   const counts = {'Year 7': 204, 'Year 8': 198, 'Year 9': 202, 'Year 10': 207, 'Year 11': 199};
@@ -233,6 +250,9 @@ def main():
                     page.wait_for_timeout(300)
                 elif name == "students":
                     page.evaluate(STUDENTS_SEED_JS)
+                    page.wait_for_timeout(500)
+                elif name == "analytics":
+                    page.evaluate(ANALYTICS_ANON_JS)
                     page.wait_for_timeout(500)
                 # Replace school header logo with a banner that matches the header navy
                 page.evaluate(r"""() => {
