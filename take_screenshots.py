@@ -150,7 +150,9 @@ STUDENTS_SEED_JS = r"""() => {
     const existing = echarts.getInstanceByDom(el);
     if (existing) existing.dispose();
     const chart = echarts.init(el);
+    const colours = ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#166534'];
     chart.setOption({
+      color: colours,
       tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
       legend: { show: false },
       series: [{
@@ -160,7 +162,7 @@ STUDENTS_SEED_JS = r"""() => {
         avoidLabelOverlap: true,
         itemStyle: { borderColor: '#fff', borderWidth: 1 },
         label: { fontSize: 11, formatter: '{b}\n{c}' },
-        data: Object.keys(counts).map(k => ({ name: k, value: counts[k] }))
+        data: Object.keys(counts).map((k, i) => ({ name: k, value: counts[k], itemStyle: { color: colours[i] } }))
       }]
     });
   }
